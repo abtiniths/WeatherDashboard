@@ -1,0 +1,13 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  border-radius: 10px;
+  border-width: 10px;
+  border-color: rgb(21, 21, 26);
+}
+.item-list {
+  list-style: none;
+  border-radius: 50px;
+  border-width: 10px;
+  border-color: rgb(21, 21, 26);
+}
