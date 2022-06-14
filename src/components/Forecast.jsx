@@ -1,10 +1,11 @@
 import React from "react";
 import { iconUrlFromCode } from "../api/weatherApi";
-import "../styles/forecast.css";
+import "../App.css";
 
 export default function Forecast({ title, items }) {
   return (
     <div className="container">
+      <h1>{title}</h1>
       {items.map((item) => (
         <div>
           <li key={item.id} className="item-list">

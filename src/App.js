@@ -2,19 +2,23 @@ import "./App.css";
 import getFormattedWeatherData from "./api/weatherApi";
 import { useEffect, useState } from "react";
 import TimeAndLocation from "./components/TimeAndLocation";
-import TempAndDetails from "./components/TempAndDetails";
+import WeatherMainCard from "./components/WeatherMainCard";
 import Forecast from "./components/Forecast";
 
 function App() {
-  // const [query, setQuery] = useState({ q: "stockholm" });
-  //const [units, setUnits] = useState("metric");
   const [weather, setWeather] = useState("");
   const [mode, setMode] = useState("online");
+  /*
+  const [timeInterval, setTimeInterval] = useState(0);
 
+  setTimeout(() => {
+    setTimeInterval(timeInterval + 1);
+  }, 720000);
+*/
   useEffect(() => {
     const fetchWeather = async () => {
       try {
-        const data = await getFormattedWeatherData({ q: "stockholm" }).then(
+        await getFormattedWeatherData().then(
           (data) => {
             console.log(data);
             setWeather(data);
@@ -32,25 +36,26 @@ function App() {
 
   return (
     <div className="App">
+      <div className="WeatherContainer">
       {weather && (
         <div>
           <div className="ansikte">
             <TimeAndLocation weather={weather} />
-            <TempAndDetails weather={weather} />
+            <WeatherMainCard weather={weather} />
           </div>
-          <Forecast title="hourly forecast" items={weather.hourly} />
-          <Forecast title="hourly forecast" items={weather.daily} />
+          <Forecast title="Hourly forecast" items={weather.hourly} />
+          <Forecast title="Daily forecast" items={weather.daily} />
         </div>
       )}
-      <p>
+      </div>
+      <div>
         {mode === "offline" ? (
-          <p>
-            {" "}
+          <p className="OfflineMessage">
             You are now in offline mode, for updated weather information, please
-            connect to a network.{" "}
+            connect to a network.
           </p>
         ) : null}
-      </p>
+      </div>
     </div>
   );
 }

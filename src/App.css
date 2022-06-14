@@ -14,3 +14,30 @@
   box-shadow: 10px 10px;
   background-color: aqua;
 }
+.container {
+  display: flex;
+  flex-direction: row;
+  border-radius: 10px;
+  border-width: 10px;
+  border-color: rgb(21, 21, 26);
+}
+.item-list {
+  list-style: none;
+  border-radius: 50px;
+  border-width: 10px;
+  border-color: rgb(21, 21, 26);
+}
+.MainCard p{
+  font-size: 20px;
+  font-weight: 700;
+  display: flex;
+  flex-direction: row;
+}
+.OfflineMessage{
+  position: absolute;
+  background-color: orange;
+  color: black;
+  text-align: center;
+  padding: 10px;
+  font-size: 35px;
+}

@@ -17,8 +17,16 @@ this.addEventListener("install", (event) => {
         "/img/wn/08d@2x.png",
         "/img/wn/09d@2x.png",
         "/img/wn/10d@2x.png",
+        "/img/wn/01n@2x.png",
+        "/img/wn/02n@2x.png",
+        "/img/wn/03n@2x.png",
         "/img/wn/04n@2x.png",
-
+        "/img/wn/05n@2x.png",
+        "/img/wn/06n@2x.png",
+        "/img/wn/07n@2x.png",
+        "/img/wn/08n@2x.png",
+        "/img/wn/09n@2x.png",
+        "/img/wn/10n@2x.png",
         "/",
       ]);
     })
