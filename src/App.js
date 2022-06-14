@@ -8,13 +8,12 @@ import Forecast from "./components/Forecast";
 function App() {
   const [weather, setWeather] = useState("");
   const [mode, setMode] = useState("online");
-  /*
-  const [timeInterval, setTimeInterval] = useState(0);
+  //const [timeInterval, setTimeInterval] = useState(0);
 
-  setTimeout(() => {
-    setTimeInterval(timeInterval + 1);
-  }, 720000);
-*/
+  //setTimeout(() => {
+  //setTimeInterval(timeInterval + 1);
+  //}, 1000 * 60 * 60 * 2);
+
   useEffect(() => {
     const fetchWeather = async () => {
       try {
