@@ -11,8 +11,9 @@ export default function TimeAndLocation({
     <div>
     
       <div className="Details"></div>
+      <Clock />
         <p className="CityAndCountry">{`${name}, ${country}`} </p>
-        <p className="TimeZone">{formatToLocalTime(dt, timezone)}   <Clock /></p>
+        <p className="TimeZone">{formatToLocalTime(dt, timezone)}  </p>
     </div>
   );
 }
