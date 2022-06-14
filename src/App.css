@@ -30,6 +30,16 @@
   border-width: 2px;
   border-color: rgb(21, 21, 26);
 }
+.MainCard{
+  display: flex;
+ 
+}
+.TempContainer{
+padding: 10px;
+}
+.SunContainer{
+padding: 10px;
+}
 .MainCard p{
   font-size: 20px;
   font-weight: 700;
@@ -45,8 +55,6 @@
 .Details p{
   font-size: 20px;
   font-weight: 700;
- 
-
 }
 .CityAndCountry{
   font-size: 20px;
@@ -64,3 +72,4 @@
   font-size: 20px;
   font-weight: 700;
 }
+
