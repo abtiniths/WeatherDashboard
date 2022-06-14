@@ -4,14 +4,14 @@ import "../App.css";
 
 export default function Forecast({ title, items }) {
   return (
-    <div className="container">
+    <div className="Container">
       <h1>{title}</h1>
       {items.map((item) => (
         <div>
-          <li key={item.id} className="item-list">
-            <p>{item.title}</p>
+          <li key={item.id} className="ItemList">
+            <p className="ItemTitle">{item.title}</p>
             <img src={iconUrlFromCode(item.icon)} alt="icon" />
-            <p>{item.temp.toFixed()}°C</p>
+            <p className="ItemTemp">{item.temp.toFixed()}°C</p>
           </li>
         </div>
       ))}
