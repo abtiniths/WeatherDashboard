@@ -1,8 +1,6 @@
 import { DateTime } from "luxon";
 
-const API_KEY = "895284fb2d2c50a520ea537456963d9c"
-
-
+const API_KEY = "895284fb2d2c50a520ea537456963d9c";
 
 const getWeatherData = async (url) => {
   return fetch(url).then((res) => res.json());
@@ -59,10 +57,12 @@ const formatForecastWeather = (data) => {
 };
 
 const getFormattedWeatherData = async () => {
-  const formattedCurrentWeather = await getWeatherData(`https://api.openweathermap.org/data/2.5/weather?q=stockholm&units=metric&appid=${API_KEY}`
+  const formattedCurrentWeather = await getWeatherData(
+    `https://api.openweathermap.org/data/2.5/weather?q=stockholm&units=metric&appid=${API_KEY}`
   ).then(formatCurrentWeather);
-  const formattedForecastWeather = await getWeatherData(`https://api.openweathermap.org/data/2.5/onecall?lat=59.3326&lon=18.0649&exclude=current%2Cminutely%2Calerts&units=metric&appid=${API_KEY}`
-).then(formatForecastWeather);
+  const formattedForecastWeather = await getWeatherData(
+    `https://api.openweathermap.org/data/2.5/onecall?lat=59.3326&lon=18.0649&exclude=current%2Cminutely%2Calerts&units=metric&appid=${API_KEY}`
+  ).then(formatForecastWeather);
   return { ...formattedCurrentWeather, ...formattedForecastWeather };
 };
 
